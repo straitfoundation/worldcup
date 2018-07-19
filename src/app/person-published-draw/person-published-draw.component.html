@@ -1,0 +1,68 @@
+<div class="example-container mat-elevation-z8 game-list" >
+  <div class="game_filter">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="">
+    </mat-form-field>
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="result">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>中奖人</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.result}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>名称</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{element.name}}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="interval">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>开奖周期(小时)</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{element.interval}}
+      </mat-cell>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 开奖时间 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="bonus">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 奖池 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.bonus}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="mybonus">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 我的奖金 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.mybonus}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="next">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>下次开奖</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{element.next}}
+    </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <!--<ng-container matColumnDef="bet">-->
+    <!--<mat-header-cell *matHeaderCellDef></mat-header-cell>-->
+    <!--<mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>-->
+    <!--</ng-container>-->
+
+    <ng-container matColumnDef="stopped">
+      <mat-header-cell *matHeaderCellDef> 操作 </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" *ngIf="element.stopped === false" class="stop">停止</button>
+        <button mat-raised-button color="warn" *ngIf="element.stopped" class="stop" disabled>已停止</button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

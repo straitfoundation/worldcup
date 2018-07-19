@@ -1,0 +1,72 @@
+.example-card {
+
+
+  float: left;
+  margin:10px;
+  display: block; float: left; position: relative;
+  background-color: white;
+  color: white;
+  padding:  0px;
+}
+.body{
+  float: left; width: 100%; overflow: hidden; position: relative;
+
+  border-style: solid;
+  border-top: none;
+  border-color: #b1b1b1;
+  border-width: 1px;
+}
+@media only screen and (min-width: 1029px){
+  .body{
+    float: left; width: 100%; overflow: hidden; position: relative;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+  }
+  .example-card {
+
+    max-width: 170px;
+    float: left;
+    margin:10px;
+    display: block; float: left; position: relative;
+  }
+
+}
+@media only screen and (min-width: 399px) and (max-width: 1024px){
+  /*这里写宽度大于321px小于1024px的样式(一般是平板电脑)*/
+  .example-card {
+
+    max-width: 150px;
+    float: left;
+    margin:10px;
+    display: block; float: left; position: relative;
+  }
+}
+
+.example-header-image {
+
+  background-size: cover;
+}
+
+.mat-raised-button{
+  width: 100%;
+}
+
+/*.nav{*/
+  /*clear: left; float: left; position: relative; left: 50%;!*整个分页向右边移动宽度的50%*! text-align: center;*/
+/*}*/
+
+/deep/ .mat-raised-button.mat-primary[disabled], .mat-raised-button.mat-warn[disabled], .mat-raised-button[disabled][disabled] {
+  color: #a7a7a7;
+}
+.index-title {
+  text-align: left;
+  background-color: white;
+  color: #000;
+
+
+}
+ .vip_only {
+   background-color: #acacac;
+ }

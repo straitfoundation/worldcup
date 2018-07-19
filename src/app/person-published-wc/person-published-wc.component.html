@@ -1,0 +1,43 @@
+
+
+  <div class="wc_game_list" >
+  <div *ngFor="let game of games" class="game_card">
+    <mat-card class="example-card">
+      <mat-card-header>
+
+        <mat-card-title>
+          <div class="title icon"><mat-icon>tv</mat-icon></div>
+          <div class="title txt">{{game[6]}} vs. {{game[7]}}</div>
+        </mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list role="list" >
+          <mat-list-item role="listitem" class="list">
+            <div class="left">总奖池</div>
+            <div class="right">{{game[9] / 100000000}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="list">
+            <div class="left">参与人数</div>
+            <div class="right">{{game[5]}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="list">
+            <div class="left">胜/平/负(人数)</div>
+            <div class="right">{{game[2]}}/{{game[4]}}/{{game[3]}}</div>
+          </mat-list-item>
+
+
+        </mat-list>
+
+      </mat-card-content>
+      <mat-card-actions >
+        <!--<button mat-button (click)="add_to_cart(product.id)" class="increase-btn">+</button>-->
+        <!--<input matInput value="{{product.quantity}}" class="product-quantity" disabled>-->
+        <button mat-button (click)="setGame(game[10])" class="bet-btn" color="warn" *ngIf="game[1] === '0'">开奖</button>
+        <button mat-button class="bet-btn" color="warn" *ngIf="game[1] != '0'" disabled>已开奖</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+  </div>
+

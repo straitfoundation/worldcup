@@ -1,0 +1,25 @@
+/*/deep/ .person .mat-tab-header{*/
+  /*border-bottom-color: #e61414;*/
+  /*border-bottom-style: solid;*/
+  /*border-bottom-width: 2px;*/
+
+/*}*/
+/*/deep/ .person .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{*/
+  /*opacity: 0;*/
+/*}*/
+
+
+/*/deep/ .person .mat-tab-label-active{*/
+  /*background-color: #e61414 !important;*/
+  /*color: white !important;*/
+/*}*/
+
+/*/deep/ .person .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus{*/
+  /*background-color: #e61414 !important;*/
+/*}*/
+
+/*/deep/ .person .mat-tab-label {*/
+  /*width:33% !important;*/
+/*}*/
+
+

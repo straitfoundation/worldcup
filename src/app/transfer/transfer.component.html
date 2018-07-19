@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>xx币转赠</h2>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="个人财富" value="{{balance}}" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="赠与" [(ngModel)]="to" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="金额" [(ngModel)]="value" required>
+  </mat-form-field>
+  <div class="button-row">
+    <button mat-raised-button color="primary" (click)="transferIf()" class="login_button" [disabled]="btn_disabled">确定</button>
+    <button mat-raised-button (click)="close()" [disabled]="btn_disabled">放弃</button>
+  </div>
+</div>

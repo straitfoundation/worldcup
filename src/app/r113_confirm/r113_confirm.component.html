@@ -1,0 +1,51 @@
+<h2 mat-dialog-title>请选择3个数字</h2>
+
+<div>
+  <mat-button-toggle-group multiple #group="matButtonToggleGroup">
+
+    <mat-button-toggle value="1">
+      1
+    </mat-button-toggle>
+    <mat-button-toggle value="2">
+      2
+    </mat-button-toggle>
+    <mat-button-toggle value="3">
+      3
+    </mat-button-toggle>
+    <mat-button-toggle value="4">
+      4
+    </mat-button-toggle>
+    <mat-button-toggle value="5">
+      5
+    </mat-button-toggle>
+    <mat-button-toggle value="6">
+      6
+    </mat-button-toggle>
+    <mat-button-toggle value="7">
+      7
+    </mat-button-toggle>
+    <mat-button-toggle value="8">
+      8
+    </mat-button-toggle>
+    <mat-button-toggle value="9">
+      9
+    </mat-button-toggle>
+    <mat-button-toggle value="10">
+      10
+    </mat-button-toggle>
+    <mat-button-toggle value="11">
+      11
+    </mat-button-toggle>
+
+  </mat-button-toggle-group>
+  <!--<div class="example-selected-value">Selected value: {{group.value}}</div>-->
+
+</div>
+<h2 mat-dialog-title>请输入投注金额</h2>
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="投注" value="1">
+</mat-form-field>
+<div>
+  <button mat-raised-button color="primary" (click)="onCloseConfirm()" class="confirm_button">确认</button>
+  <button mat-raised-button (click)="Cancel()">放弃</button>
+</div>

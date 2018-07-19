@@ -1,0 +1,44 @@
+<h2>个人资料</h2>
+
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="财富" value="{{balance}}" disabled>
+    <button mat-button (click)="transfer()" matSuffix>转赠</button>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="用户名" value="{{username}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" >
+    <input matInput placeholder="修改密码" [type]="'password'" [(ngModel)]="password">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="再次输入密码" [type]="'password'" [(ngModel)]="password_confirm">
+  </mat-form-field>
+
+  <!--<mat-form-field class="example-full-width">-->
+    <!--<input matInput placeholder="手机" value="{{phone}}">-->
+
+  <!--</mat-form-field>-->
+
+  <!--<mat-form-field class="example-full-width">-->
+    <!--<input matInput placeholder="验证手机">-->
+    <!--<button mat-button matSuffix (click)="send_sms()">{{sms}}</button>-->
+  <!--</mat-form-field>-->
+
+  <!--<mat-form-field class="example-full-width">-->
+    <!--<input matInput placeholder="邮箱" value="{{email}}">-->
+
+  <!--</mat-form-field>-->
+
+
+
+<div class="button-row">
+  <button mat-raised-button color="primary" (click)="Confirm()" class="login_button" [disabled]="password === '' || password_confirm == ''">确认修改</button>
+
+  <button mat-raised-button (click)="Cancel()">取消</button>
+
+</div>

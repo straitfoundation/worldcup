@@ -1,0 +1,60 @@
+<h2 mat-dialog-title>投注 > 抢币</h2>
+
+
+<div class="example-container mat-elevation-z8" >
+  <div class="game_filter">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="">
+    </mat-form-field>
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary" (click)="openDialog()" class="join_button">参加</button>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 下次开奖时间 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 奖池 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 游戏名称 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 发起人 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container>
+    <!-- Symbol Column -->
+    <!--<ng-container matColumnDef="bet">-->
+    <!--<mat-header-cell *matHeaderCellDef></mat-header-cell>-->
+    <!--<mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>-->
+    <!--</ng-container>-->
+
+    <!--<ng-container matColumnDef="symbol">-->
+      <!--<mat-header-cell *matHeaderCellDef></mat-header-cell>-->
+      <!--<mat-cell *matCellDef="let element">-->
+
+      <!--</mat-cell>-->
+    <!--</ng-container>-->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

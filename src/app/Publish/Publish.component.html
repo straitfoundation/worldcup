@@ -1,0 +1,32 @@
+
+<h2 mat-dialog-title>开盘</h2>
+<div class="publish" *ngIf="game === '2018wc'">
+  <mat-grid-list cols="3" rowHeight="70px">
+  <mat-grid-tile>
+    <mat-form-field>
+      <mat-select placeholder="选择场次" [(value)]="matchselected">
+        <mat-option *ngFor="let match of matches" [value]="match.id">
+          {{ match.host }} vs. {{ match.guest }}
+        </mat-option>
+      </mat-select>
+
+    </mat-form-field>
+
+  </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div class="publish" *ngIf="matchselected">
+  <mat-form-field>
+    <span matPrefix>$ &nbsp;</span>
+    <input matInput value="5" placeholder="电费" disabled>
+    <mat-hint *ngIf="less5">账户余额不足，请及时充值！</mat-hint>
+  </mat-form-field>
+</div>
+<br/>
+<div class="publish" *ngIf="matchselected">
+  <mat-form-field>
+    <span matPrefix>$ &nbsp;</span>
+    <input matInput value="8%" placeholder="奖金提成" disabled>
+  </mat-form-field>
+</div>
+<button mat-raised-button color="primary" (click)="publish()" *ngIf="matchselected" class="publish_button">发布</button>

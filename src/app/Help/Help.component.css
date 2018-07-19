@@ -1,0 +1,21 @@
+button {
+  margin-top: 20px;
+}
+.intro p{
+  width: 99%;
+  word-wrap:break-word;
+  font-size: 12px;
+}
+.cash p{
+  width: 99%;
+  word-wrap:break-word;
+}
+h2{
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #8B0000;
+}
+
+.subtitle {
+
+}

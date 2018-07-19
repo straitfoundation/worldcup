@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>请选择3个数字</h2>
+
+<div>
+  <mat-form-field>
+  <mat-select placeholder="选择数字1" [(value)]="selected1">
+  <mat-option *ngFor="let number of numbers" [value]="number.value">
+  {{ number.value }}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+  <mat-select placeholder="选择数字2" [(value)]="selected2">
+  <mat-option *ngFor="let number of numbers" [value]="number.value">
+  {{ number.value }}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+  <mat-select placeholder="选择数字3" [(value)]="selected3">
+  <mat-option *ngFor="let number of numbers" [value]="number.value">
+  {{ number.value }}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+
+</div>
+<h2 mat-dialog-title>请输入投注金额</h2>
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="投注" value="$31287960" *ngIf="checked">
+  <input matInput value="$1" *ngIf="!checked">
+
+</mat-form-field>
+<mat-checkbox [(ngModel)]="checked">梭哈!</mat-checkbox>
+<div>
+  <button mat-raised-button color="primary" (click)="onCloseConfirm()" class="confirm_button">确认</button>
+  <button mat-raised-button (click)="Cancel()">放弃</button>
+</div>

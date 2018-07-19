@@ -1,0 +1,24 @@
+/deep/ .mat-tab-label {
+  min-width: 1px !important;
+  font-size: 13px !important;
+  color: #232323;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: bold;
+  font-family: "Helvetica Neue",sans-serif, "Microsoft YaHei UI", "Microsoft YaHei";
+}
+
+div {
+ margin-left: auto;
+  margin-right: auto;
+}
+/deep/ app-footer .mat-tab-group.mat-primary .mat-ink-bar{
+  background-color: transparent;
+}
+/deep/ .mat-tab-header, .mat-tab-nav-bar{
+  border-bottom: none;
+}
+
+/deep/ .mat-tab-label-active{
+
+}

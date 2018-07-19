@@ -1,0 +1,57 @@
+<div class="example-container mat-elevation-z8 game-list" >
+  <div class="game_filter">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="">
+    </mat-form-field>
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>游戏名称</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="bet">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>我的投注</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{element.bet}}
+      </mat-cell>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 开奖时间 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="bonus">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 总奖池 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.bonus}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="mybonus">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> 我的奖金 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.mybonus}} </mat-cell>
+    </ng-container>
+    <!-- Symbol Column -->
+    <!--<ng-container matColumnDef="bet">-->
+    <!--<mat-header-cell *matHeaderCellDef></mat-header-cell>-->
+    <!--<mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>-->
+    <!--</ng-container>-->
+
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>状态</mat-header-cell>
+
+      <mat-cell *matCellDef="let element">
+        <p class="lucky" *ngIf="element.status === 0">中奖！</p>
+        <p class="unlucky" *ngIf="element.status === 1">未中奖</p>
+        <p class="inprogress" *ngIf="element.status === 2">待开奖</p>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

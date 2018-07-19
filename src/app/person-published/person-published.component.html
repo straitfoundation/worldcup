@@ -1,0 +1,65 @@
+<div class="person_title">
+  <div class="h2">
+    <h2>我的盘口</h2>
+  </div>
+  <div class="closex">
+    <button mat-button class="invisible"></button>
+    <button mat-icon-button (click)="close()"><mat-icon>close</mat-icon></button>
+  </div>
+</div>
+<div class="person_published_tabs">
+  <mat-tab-group>
+    <mat-tab label="全部">
+
+    </mat-tab>
+    <mat-tab label="未开奖">
+
+    </mat-tab>
+    <mat-tab label="已开奖">
+
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<div class="person_nav">
+  <div class="header">
+    <div class="filter">
+      <!--<mat-button-toggle-group name="" aria-label="">-->
+      <!--<mat-button-toggle value="bold">未开奖</mat-button-toggle>-->
+      <!--<mat-button-toggle value="italic">未中奖</mat-button-toggle>-->
+      <!--<mat-button-toggle value="bold">中奖</mat-button-toggle>-->
+      <!--</mat-button-toggle-group>-->
+      <!--<button mat-mini-fab class="btn_all">全</button>-->
+      <button mat-mini-fab class="btn_wc">足</button>
+      <button mat-mini-fab class="btn_3d">3D</button>
+      <button mat-mini-fab class="btn_113">11</button>
+      <button mat-mini-fab class="btn_4">透</button>
+      <button mat-mini-fab class="btn_5">双</button>
+      <button mat-mini-fab class="btn_6">7</button>
+      <button mat-mini-fab class="btn_7">币</button>
+    </div>
+    <!--<div class="status">-->
+    <!--<mat-button-toggle-group name="" aria-label="" class="filter">-->
+    <!--<mat-button-toggle value="bold">中奖</mat-button-toggle>-->
+    <!--<mat-button-toggle value="italic">未中奖</mat-button-toggle>-->
+    <!--</mat-button-toggle-group>-->
+    <!--</div>-->
+  </div>
+<!--<mat-tab-group>-->
+  <!--<mat-tab label="世界杯">-->
+    <!--<app-person-published-wc></app-person-published-wc>-->
+  <!--</mat-tab>-->
+  <!--<mat-tab label="|" [disabled]="!enabled"></mat-tab>-->
+  <!--<mat-tab label="抢币" >-->
+    <!--<app-person-published-draw></app-person-published-draw>-->
+  <!--</mat-tab>-->
+  <!--<mat-tab label="|" [disabled]="!enabled"></mat-tab>-->
+  <!--<mat-tab label="3D">-->
+    <!--<app-person-published-random></app-person-published-random>-->
+  <!--</mat-tab>-->
+  <!--<mat-tab label="|" [disabled]="!enabled"></mat-tab>-->
+  <!--<mat-tab label="11选3">-->
+    <!--<app-person-published-random></app-person-published-random>-->
+  <!--</mat-tab>-->
+<!--</mat-tab-group>-->
+  <app-person-published-wc></app-person-published-wc>
+</div>

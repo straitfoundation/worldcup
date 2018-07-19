@@ -1,0 +1,25 @@
+button {
+  margin-top: 20px;
+}
+
+.publish_button{
+  background-color: #e61414;
+}
+h2 {
+  /*text-align: center;*/
+  border-bottom-style: solid;
+  border-bottom-color: #e61414;
+  border-bottom-width: 3px;
+}
+
+mat-hint {
+  color: #e61414;
+}
+
+/deep/ .mat-grid-tile .mat-figure {
+  min-width: 180px !important;
+}
+
+/deep/ .publish .mat-grid-tile {
+  width: 180px !important;
+}

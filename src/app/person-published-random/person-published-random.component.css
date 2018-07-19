@@ -1,0 +1,38 @@
+.lucky{
+  background-color: #8B0000;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+.unlucky{
+  background-color: #1a8b3d;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+.game-list .mat-cell{
+  /*text-align: center;*/
+}
+.game-list .mat-header-cell{
+  text-align: center;
+}
+
+/deep/ .game_filter .mat-form-field-underline {
+  height: 0px !important;
+}
+.game_filter .mat-input-element{
+  border-style: solid;
+  border-width: 1px;
+  height: 25px;
+  border-color: #acacac;
+}
+
+.game_filter .mat-form-field {
+  margin-left: 20%;
+  margin-right: 20%;
+  width:60%;
+}
+
+.stop{
+  width: 100%;
+}

@@ -1,0 +1,407 @@
+
+<div class="index">
+
+    <button mat-raised-button color="primary" class="index-title" (click)="openHelp(1)">
+      <div class="subtitle">足彩</div>
+      <mat-icon class="subtitle_icon">help</mat-icon>
+    </button>
+
+    <mat-card class="example-card">
+      <mat-card-header>
+
+        <mat-card-title>
+          <div>--- 世界杯 ---</div>
+
+        </mat-card-title>
+        <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="/assets/2018logo.jpg" alt="Russia 2018">
+      <!--<mat-card-content>-->
+        <!--<div class="content_form">-->
+          <!--<div class="content_left">手续费</div>-->
+          <!--<div class="content_right">10%</div>-->
+        <!--</div>-->
+      <!--</mat-card-content>-->
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="openWhenLogin()" class="join_button">{{bet_txt}}</button>
+        <!--<button mat-button>SHARE</button>-->
+      </mat-card-actions>
+    </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>--- 欧冠 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/uefa.png" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" disabled class="vip_only">即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>--- 英超 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/eng.png" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>--- 西甲 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/esn.jpg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>--- 意甲 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/ita.jpg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 德甲 ---</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/deu.jpg" alt="Russia 2018">
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 中超 ---</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/csl.png" alt="Russia 2018">
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <button mat-raised-button color="primary" class="index-title" (click)="openHelp(2)">
+    <div class="subtitle">币彩</div>
+    <mat-icon class="subtitle_icon">help</mat-icon>
+  </button>
+    <mat-card class="example-card" *ngIf="more">
+      <mat-card-header>
+
+        <mat-card-title>--- 抢币 ---</mat-card-title>
+        <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="/assets/coins.jpg" alt="Russia 2018">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="openDialog_draw()" class="vip_only" disabled>即将上线，敬请期待</button>
+        <!--<button mat-button>SHARE</button>-->
+      </mat-card-actions>
+    </mat-card>
+
+  <button mat-raised-button color="primary" class="index-title" (click)="openHelp(2)">
+    <div class="subtitle">3D彩</div>
+    <mat-icon class="subtitle_icon">help</mat-icon>
+  </button>
+
+    <mat-card class="example-card" *ngIf="more">
+      <mat-card-header>
+
+        <mat-card-title>--- 直选单式 ---</mat-card-title>
+        <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="/assets/3d.png" alt="Russia 2018">
+      <!--<mat-card-content>-->
+        <!--<p>-->
+          <!--玩法介绍玩法介绍玩法介绍玩法介绍-->
+        <!--</p>-->
+      <!--</mat-card-content>-->
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="openDialog_3d()" class="vip_only" disabled>即将上线，敬请期待</button>
+        <!--<button mat-button>SHARE</button>-->
+      </mat-card-actions>
+    </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 直选复式 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/3d2.png" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_3d()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 直选和值 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/3d3.png" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_3d()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+
+  <button mat-raised-button color="primary" class="index-title" (click)="openHelp(2)">
+    <div class="subtitle">大乐透</div>
+    <mat-icon class="subtitle_icon">help</mat-icon>
+  </button>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 单式 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/letou.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 复式 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/letou.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+
+  <button mat-raised-button color="primary" class="index-title" (click)="openHelp(2)">
+    <div class="subtitle">11选5 ---</div>
+    <mat-icon class="subtitle_icon">help</mat-icon>
+  </button>
+    <mat-card class="example-card" *ngIf="more">
+      <mat-card-header>
+
+        <mat-card-title>--- 任选二 ---</mat-card-title>
+        <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="/assets/115.jpeg" alt="Russia 2018">
+      <!--<mat-card-content>-->
+        <!--<p>-->
+          <!--玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍-->
+        <!--</p>-->
+      <!--</mat-card-content>-->
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="openDialog_113()" class="vip_only" disabled>即将上线，敬请期待</button>
+        <!--<button mat-button>SHARE</button>-->
+      </mat-card-actions>
+    </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 任选三 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/115.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_113()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 任选四 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/115.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_113()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 前一 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/115.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_113()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 前二直选 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/115.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_113()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" *ngIf="more">
+    <mat-card-header>
+
+      <mat-card-title>--- 前二组选 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/115.jpeg" alt="Russia 2018">
+    <!--<mat-card-content>-->
+    <!--<p>-->
+    <!--玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍-->
+    <!--</p>-->
+    <!--</mat-card-content>-->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog_113()" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+
+
+
+  <button mat-raised-button color="primary" class="index-title" (click)="openHelp(2)">
+    <div class="subtitle">双色球</div>
+    <mat-icon class="subtitle_icon">help</mat-icon>
+  </button>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>--- 单式 ---</mat-card-title>
+        <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="/assets/shuangseqiu.jpeg" alt="Russia 2018">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+        <!--<button mat-button>SHARE</button>-->
+      </mat-card-actions>
+    </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 复式 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/shuangseqiu.jpeg" alt="Russia 2018">
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 胆拖 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/shuangseqiu.jpeg" alt="Russia 2018">
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+
+  <button mat-raised-button color="primary" class="index-title" (click)="openHelp(2)">
+    <div class="subtitle">七乐彩</div>
+    <mat-icon class="subtitle_icon">help</mat-icon>
+  </button>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>--- 单式 ---</mat-card-title>
+        <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="/assets/7le.jpeg" alt="Russia 2018">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+        <!--<button mat-button>SHARE</button>-->
+      </mat-card-actions>
+    </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>--- 复式 ---</mat-card-title>
+      <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="/assets/7le.jpeg" alt="Russia 2018">
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="vip_only" disabled>即将上线，敬请期待</button>
+      <!--<button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>
+
+
+
+

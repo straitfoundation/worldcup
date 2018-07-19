@@ -1,0 +1,28 @@
+<mat-list role="list" class="betting_list">
+  <mat-list-item role="listitem">
+    <div class="left refused">比赛场次</div>
+    <div class="right refused">{{data[6]}}(主) vs. {{data[7]}}(客)</div>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <div class="left refused">主队结果</div>
+    <div class="right refused">
+      <mat-radio-group [(ngModel)]="betting">
+        <mat-radio-button value="0">胜</mat-radio-button>
+        <mat-radio-button value="1">平</mat-radio-button>
+        <mat-radio-button value="2">负</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <div class="left refused">投注金额</div>
+    <div class="right refused">
+      <mat-form-field class="example-full-width betting_value">
+        <input matInput placeholder="" value="1" [(ngModel)]="betValue">
+      </mat-form-field>
+    </div>
+  </mat-list-item>
+</mat-list>
+<div>
+  <button mat-raised-button color="primary" (click)="betConfirm()" class="confirm_button">确认</button>
+  <button mat-raised-button (click)="Cancel()">放弃</button>
+</div>

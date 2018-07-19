@@ -1,0 +1,36 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 1000px;
+  min-width: 400px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+/*/deep/ .cdk-overlay-pane {*/
+  /*width: 600px !important;*/
+/*}*/
+
+.confirm_button{
+  background-color: #e61414;
+}
+.left{
+  width: 50%;
+  color: grey;
+  font-size: 14px;
+}
+.right{
+  /*text-align: right;*/
+  width: 50%;
+  font-size: 14px;
+  opacity: .87;
+}
+/deep/ .betting_list .mat-list-item-content {
+  padding: 0px !important;
+}
+
+.betting_value {
+  width:90%;
+}
